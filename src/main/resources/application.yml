@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: dameng-demo
+
+#  datasource:
+#    driver-class-name: dm.jdbc.driver.DmDriver
+#    url: jdbc:dm://192.168.235.231:30236
+#    username: SYSDBA
+#    password: SYSDBA001
+server:
+  port: 8080
+
+
+logging:
+  level:
+    com.cmcc.damengdemo: debug
+
+
+mybatis-plus:
+  type-aliases-package: com.cmcc.damengdemo.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    # MyBatis 配置
+    map-underscore-to-camel-case: true
+  global-config:
+    # 全局配置
+    db-config:
+      # 数据库配置
+      id-type: auto
